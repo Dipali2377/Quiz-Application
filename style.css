@@ -16,9 +16,10 @@ html {
   background-color: lightpink;
 }
 .inner-div {
-  width: 50vw;
+  width: 45vw;
+
   background-color: #fff;
-  padding: 40px 50px;
+  padding: 30px 40px;
   border-radius: 10px;
   box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.5);
 }
@@ -50,4 +51,14 @@ input {
 }
 #submit:hover {
   background-color: #e77af2;
+}
+
+#score {
+  background-color: lightblue;
+  margin-top: 30px;
+  padding: 30px 40px;
+  box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.5);
+}
+.scorebutton {
+  display: none;
 }
