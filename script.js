@@ -35,3 +35,23 @@ const quizData = [
     ans: "ans1",
   },
 ];
+
+const question = document.querySelector(".question");
+const option1 = document.querySelector("#option1");
+const option2 = document.querySelector("#option2");
+const option3 = document.querySelector("#option3");
+const option4 = document.querySelector("#option4");
+const submit = document.querySelector("#submit");
+
+let QuestionCount = 0;
+LoadQuestions = () => {
+  const QuestionList = quizData[QuestionCount];
+  question.innerHTML = QuestionList.question;
+
+  option1.innerHTML = QuestionList.a;
+  option2.innerHTML = QuestionList.b;
+  option3.innerHTML = QuestionList.c;
+  option4.innerHTML = QuestionList.d;
+};
+
+LoadQuestions();
