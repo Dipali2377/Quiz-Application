@@ -43,6 +43,8 @@ const option3 = document.querySelector("#option3");
 const option4 = document.querySelector("#option4");
 const submit = document.querySelector("#submit");
 
+const answers = document.querySelectorAll(".answer");
+
 let QuestionCount = 0;
 LoadQuestions = () => {
   const QuestionList = quizData[QuestionCount];
@@ -55,3 +57,19 @@ LoadQuestions = () => {
 };
 
 LoadQuestions();
+
+// Creating the function that will store the checked answer
+
+const getCheckedAnswer = () => {
+  let answer;
+  answers.forEach((curAnswer) => {
+    if (curAnswer.checked) {
+      answer = curAnswer.id;
+    }
+  });
+  return answer;
+};
+
+submit.addEventListener("click", () => {
+  const checkedAnswer = getCheckedAnswer();
+});
